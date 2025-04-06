@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stories | Lord Aris</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      font-family: 'Georgia', serif;
+      color: white;
+      overflow: hidden;
+      background-color: #000;
+    }
+
+    /* === Background Video === */
+
+
+    /* === Shoji-style Sidebar Trigger Area === */
+    .sidebar-trigger {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      z-index: 10;
+    }
+
+    /* === Shoji-style Sidebar === */
+    .main-sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      border-right: 2px solid #555;
+      transition: left 0.5s ease;
+      z-index: 9;
+      padding: 40px 20px;
+    }
+
+    .sidebar-trigger:hover ~ .main-sidebar,
+    .main-sidebar:hover {
+      left: 0;
+    }
+
+    .main-sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 20px 0;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+
+    .main-sidebar a:hover {
+      color: #ccc;
+      transform: translateX(5px);
+    }
+
+    /* === Intro Animation === */
+    .intro {
+      position: absolute;
+      top: 40px;
+      width: 100%;
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      animation: fadeInUp 2s ease forwards;
+      opacity: 0;
+      z-index: 5;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+       /* 📚 Poems Navigation Sidebar */
+       .poem-nav {
+      position: fixed;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 240px;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 12px;
+      z-index: 5;
+      max-height: 80%;
+      overflow-y: auto;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    }
+
+    .poem-nav a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin: 10px 0;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      text-align: center;
+      transition: background 0.3s;
+      justify-content: center;
+    }
+
+    .poem-nav a:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    /* Scrollbar Styling */
+    .poem-nav::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .poem-nav::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+    }
+    .intro-text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  opacity: 0;
+  animation: fadeSlideDown 2.5s ease forwards;
+  z-index: 2;
+}
+
+  </style>
+</head>
+<body>
+  <video autoplay muted loop id="bgs-video">
+    <source src="17119104-uhd_3840_2160_25fps.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- 🔲 Sidebar Trigger Area -->
+  <div class="sidebar-trigger"></div>
+
+  <!-- 🎴 Main Navigation Sidebar -->
+  <div class="main-sidebar">
+    <a href="home.html">Home</a>
+    <a href="poems.html">Poems</a>
+    <a href="stories.html">Stories</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- ✨ Intro Text -->
+  <div class="intro">The Stories Shelf of Lord Aris
+    <p>
+        物語を書くのが嫌い</p>
+  </div>
+
+  <div class="poem-nav">
+    <a href="poems/The-Los.html">The Last Cigarette</a>
+    <a href="poems/et-night.html">The Whispers Of Rain</a>
+    <a href="poems/ehoes-of-silence.html">Evmon Hevil Aristone</a>
+    <!-- Add more story here -->
+  </div>
+
+
+</body>
+</html>

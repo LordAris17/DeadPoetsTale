@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Dead Poets Tale</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      font-family: 'Georgia', serif;
+      color: white;
+      overflow: hidden;
+      background-color: #111;
+    }
+
+    video.background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100vw;
+      min-height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -200px;
+      width: 200px;
+      height: 100%;
+      background: rgba(20, 20, 20, 0.9);
+      border-right: 2px solid rgba(255, 255, 255, 0.1);
+      transition: left 0.5s ease;
+      padding-top: 50px;
+      z-index: 2;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .hover-zone {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 100px;
+      z-index: 3;
+    }
+
+    .hover-zone:hover + .sidebar,
+    .sidebar:hover {
+      left: 0;
+    }
+
+    .intro-text {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2em;
+      opacity: 0;
+      animation: fadeInSlide 2s ease forwards;
+      z-index: 1;
+      text-align: center;
+      color:darkgray;
+      font-size: 50px;
+    }
+
+    @keyframes fadeInSlide {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    .content {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+      height: 65%;
+      overflow-y: auto;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 12px;
+      z-index: 1;
+      line-height: 1.7;
+      font-size: 20px;
+    }
+
+    .content::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .content::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 3px;
+    }
+
+    .japanese {
+      font-style: italic;
+      color: #ccc;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video class="backgroud-video" autoplay muted loop>
+    <source src="5471896-uhd_2560_1440_30fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Hover Zone for Sidebar -->
+  <div class="hover-zone"></div>
+
+  <!-- Sidebar Navigation -->
+  <div class="sidebar">
+    <a href="home.html">Home</a>
+    <a href="poems.html">Poems</a>
+    <a href="stories.html">Stories</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Intro Text -->
+  <div class="intro-text">The Soul Behind Dead Poets Tale</div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <p>
+      I am Lord Aris, a wandering soul who weaves words like silk under the moon. My writings aren't just poems—they are echoes of broken thoughts, stitched memories, and the shadows that live in quiet corners. Each line I write is a breath of the infinite, a heartbeat lost in time.<br><br>
+    </p>
+    <p>
+      "Dead Poets Tale" isn't just a name—it's a realm. A space where forgotten verses and quiet screams live on. It is my rebellion against silence, my ode to darkness, beauty, grief, and love.
+    </p>
+    <p class="japanese">
+      死んだ詩人の物語。それはただの言葉ではなく、魂の深い叫びです。<br><br>
+    </p>
+    <p>
+      I write for those who feel too much, for those who stay up late asking the sky for answers. If you've ever stared into the void and felt it stare back, then you’re already home.
+    </p>
+    <p>
+      My words may not heal—but they will sit beside you in the dark. Because sometimes, that’s all we really need.
+    </p>
+    <p class="japanese">
+      闇の中で、一緒に座ってくれる言葉。それが詩です。<br><br>
+    </p>
+    🕯️ About Me – Lord Aris
+
+	“I don’t write poems, I carve echoes from the silence.”
+
+My name is Lord Aris, and I am not merely a poet — I am a soul who bleeds ink.
+
+I walk the thin veil between dreams and reality, gathering fragments of emotion, of heartbreak, of the cosmos, of things unspoken. My words are not meant to entertain — they are meant to haunt, heal, and hold.
+I am the sum of a thousand sleepless nights and the quiet ache of a forgotten sky.
+
+I was born with ink in my veins and shadows in my chest. I never truly belonged here — so I built this space, Dead Poets Tale, as my refuge. A digital graveyard of thoughts where poetry never dies.
+
+⸻<br><br>
+
+📜 About Dead Poets Tale
+
+	“死者の詩人の物語 (Shisha no shijin no monogatari)” — The Tale of the Dead Poet.
+
+Dead Poets Tale is not just a website.
+It's a breathing book. A shrine. A space where the living can meet the echoes of the dead.
+
+This is where I:
+	•	Unveil poems that feel like whispered confessions in the dark.
+	•	Tell stories woven in stars and shadows.
+	•	Welcome those who feel too much, or nothing at all.
+
+Each page you turn here is a portal to another fragment of me.
+Each poem, a scar.
+Each story, a pulse.
+Each silence… intentional.
+
+⸻<br><br>
+
+🌙 Philosophical Core<br>
+	•	言葉 (Kotoba) — Words are sacred.<br>
+	•	孤独 (Kodoku) — Solitude is strength.<br>
+	•	永遠 (Eien) — Poetry is eternal.<br>
+
+I believe a poem should not be understood.
+It should be felt, like smoke slipping through your fingers.
+
+⸻
+
+  </div>
+
+</body>
+</html>

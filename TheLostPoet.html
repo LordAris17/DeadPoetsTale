@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Dead Poets Tale</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      font-family: 'Georgia', serif;
+      color: white;
+      overflow: hidden;
+      background-color: #111;
+    }
+
+    video.background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100vw;
+      min-height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left:-200px;
+      width: 200px;
+      height: 100%;
+      background: rgba(20, 20, 20, 0.9);
+      border-right: 2px solid rgba(255, 255, 255, 0.1);
+      transition: left 0.5s ease;
+      padding-top: 50px;
+      z-index: 2;
+      display: inline;
+    }
+
+    .sidebar a {
+      display:block;
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .hover-zone {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 100px;
+      z-index: 3;
+    }
+
+    .hover-zone:hover + .sidebar,
+    .sidebar:hover {
+      left: 0;
+    }
+
+    .intro-text {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2em;
+      opacity: 0;
+      animation: fadeInSlide 2s ease forwards;
+      z-index: 1;
+      text-align: center;
+      color:darkgray;
+      font-size: 50px;
+    }
+
+    @keyframes fadeInSlide {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    .content {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+      height:auto;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 30px;
+      border-radius: 12px;
+      z-index: 1;
+      line-height: 1.7;
+      font-size: 20px;
+    }
+
+    .content::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .content::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 3px;
+    }
+
+    .japanese {
+      font-style: italic;
+      color: #ccc;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video class="backgroud-video" autoplay muted loop>
+    <source src="6037655-uhd_4096_2160_25fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Hover Zone for Sidebar -->
+  <div class="hover-zone"></div>
+
+  <!-- Sidebar Navigation -->
+  <div class="sidebar">
+    <a href="poems.html">Home</a>
+    <a href="TheLastPhoto.html">The Last Photo</a>
+    <a href="stories.html">The Cathedral</a>
+    <a href="about.html">Yae Yeeyong</a>
+    <a href="contact.html">The Raven's Fate</a>
+  </div>
+
+  <!-- Intro Text -->
+  <div class="intro-text">The Last Photo</div>
+
+  <!-- Main Content -->
+  <div class="content">
+    The sky rained blood to sweep the smoke of flesh
+    Tears came from the mountains of corpse.<br>
+    No cry,just the crackling of wood so fresh,
+    As ashes fell where the cities once stood,
+    a silent mesh.<br>
+    Kamikaze soared above, the heavens split apart,
+    Nuclear drops forged the flame's ruthless art.<br><br>
+    The pilot's hand,trembling,reached for the photo,
+    A glimpse of her smile,his heart a shadow.<br>
+    In the pocket of his uniform,it was there-<br>
+    A token of love,a memory laid bare,
+    A drop of tears ran down his cheeks,
+    As the winds of fate began to speak.<br>
+    Through the cockpit's glass,the red smoke bled,
+    A sea of fire where many had bled.<br>
+    He whispered her name,just once,in the air,
+    Then Dove,a sacrifice beyond compare.<br>
+    The plane plunged into the oceans's rage,
+    into the red-the final stage.
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Dead Poets Tale</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      font-family: 'Georgia', serif;
+      color: white;
+      overflow: hidden;
+    }
+
+    video.bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* Sidebar Trigger Zone */
+    .hover-zone {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 100px;
+      z-index: 20;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -220px;
+      width: 200px;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      padding-left: 60px;
+      transition: left 0.5s ease-in-out;
+      z-index: 10;
+    }
+
+    .hover-zone:hover + .sidebar,
+    .sidebar:hover {
+      left: 0;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s;
+      padding: 15px ;
+      display: block;
+    }
+
+    .sidebar a:hover {
+      color: #999;
+    }
+
+    /* Intro Text */
+    .intro-text {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 32px;
+      text-align: center;
+      opacity: 0;
+      animation: fadeSlide 2s ease forwards;
+    }
+
+    @keyframes fadeSlide {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    /* Contact Form */
+    .contact-form {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      max-width: 600px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 12px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #ccc;
+    }
+
+    .contact-form button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .contact-form button:hover {
+      background-color: #555;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- 🔊 Background Video -->
+  <video class="bg-video" autoplay loop muted>
+    <source src="2018959-hd_1920_1080_30fps.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- 👆 Sidebar Hover Zone -->
+  <div class="hover-zone"></div>
+
+  <!-- 📂 Sidebar Navigation -->
+  <div class="sidebar">
+    <a href="home.html">Home</a>
+    <a href="poems.html">Poems</a>
+    <a href="stories.html">Stories</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- 🕊️ Intro Text -->
+  <div class="intro-text">Send Your Words Into the Void...</div>
+
+  <!-- 💌 Contact Form -->
+  <div class="contact-form">
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+</body>
+</html>

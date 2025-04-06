@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poems | Dead Poets Tale</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      font-family: 'Georgia', serif;
+      color: white;
+      overflow: hidden;
+      background-color: #111;
+    }
+
+    /* 🔲 Fullscreen Background Video */
+    #background-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      opacity: 0.5;
+    }
+
+    /* 🎴 Shoji-style Sidebar (Top Left Hover) */
+    .main-sidebar {
+      position: fixed;
+      top: 0;
+      left: -220px;
+      height: 100%;
+      width: 200px;
+      background-color: rgba(0, 0, 0, 0.8);
+      transition: left 0.4s ease;
+      padding-top: 60px;
+      z-index: 10;
+    }
+
+    .trigger-zone {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 100px;
+      z-index: 20;
+    }
+
+    .trigger-zone:hover + .main-sidebar,
+    .main-sidebar:hover {
+      left: 0;
+    }
+
+    .main-sidebar a {
+      display: block;
+      color: white;
+      padding: 15px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .main-sidebar a:hover {
+      background-color: #333;
+    }
+    #intr {
+      position: absolute;
+      top: 40px;
+      width: 100%;
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      animation: fadeInUp 2s ease forwards;
+      opacity: 0;
+      z-index: 5;
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* 📚 Poems Navigation Sidebar */
+    .poem-nav {
+      position: fixed;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 240px;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 12px;
+      z-index: 5;
+      max-height: 80%;
+      overflow-y: auto;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    }
+
+    .poem-nav a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin: 10px 0;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      text-align: center;
+      transition: background 0.3s;
+      justify-content: center;
+    }
+
+    .poem-nav a:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    /* Scrollbar Styling */
+    .poem-nav::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .poem-nav::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+    }
+    .intro-text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  opacity: 0;
+  animation: fadeSlideDown 2.5s ease forwards;
+  z-index: 2;
+}
+
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="intro-text">
+    <h1>The Poetry House Of Lord Aris</h1>
+    <p>全ての言葉は血を流し、全ての沈黙は歌う.</p>
+  </div>
+  <!-- 📹 Background Video -->
+  <video autoplay muted loop id="b-video">
+    <source src="2865145-hd_1920_1080_30fps.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- 🎴 Hover Zone + Sidebar -->
+  <div class="trigger-zone"></div>
+  <div class="main-sidebar">
+    <a href="home.html">Home</a>
+    <a href="poems.html">Poems</a>
+    <a href="stories.html">Stories</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="poem-nav">
+    <a href="TheLostPoet.html">The Lost Poet</a>
+    <a href="poems/eternal-night.html">The Cathedral</a>
+    <a href="TheLastPhoto.html">The Last Photo</a>
+    <a href="poems/echoes-of-silence.html">The Soul's Curse</a>
+    <a href="poems/ashes-and-stars.html">The River's Lament</a>
+    <a href="poems/whispers-of-the-wind.html">The Black Rose</a>
+    <a href="poems/echoes-of-the-past.html">Yae Yeeyong</a>
+    <a href="poems/whispers-of-the-night.html">The Raven's Fate</a>
+    <!-- Add more poems here -->
+  </div>
+
+</body>
+</html>
