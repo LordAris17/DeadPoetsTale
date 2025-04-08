@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -157,6 +158,84 @@
     transform: translate(-50%, 0);
   }
 }
+@media (max-width: 768px) {
+  body, html {
+    overflow: auto;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  #bg-video {
+    object-fit: cover;
+  }
+
+  /* Example: Adjust sections/text/buttons if you have them */
+  .container, .content, .header, .poem-text {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  h1, h2, p {
+    font-size: 1.2em;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 0.6em 1.2em;
+  }
+}
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .main-sidebar {
+        width: 100%;
+        left: -100%;
+      }
+
+      .trigger-zone {
+        width: 100%;
+        height: 40px;
+      }
+
+      .trigger-zone:hover + .main-sidebar,
+      .main-sidebar:hover {
+        left: 0;
+      }
+    }
+    @media (max-width: 480px) {
+      .sidebar {
+        width: 100%;
+        left: -100%;
+      }
+
+      .trigger-zone {
+        width: 100%;
+        height: 40px;
+      }
+
+      .trigger-zone:hover + .sidebar,
+      .sidebar:hover {
+        left: 0;
+      }
+    }
+    .intro-text h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 6px black;
+    }
+    .intro-text p {
+      font-size: 1.5rem;
+      line-height: 1.6;
+      text-shadow: 1px 1px 4px black;
+    }
+    .intro-text a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
   </style>
 </head>
 <body>
